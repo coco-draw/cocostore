@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>COCO STORE</title>
+<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+<!-- ================= HOME ================= -->
+<div id="home">
+
+    <img src="images/banner.jpg" class="banner">
+
+    <h2>Product Photos</h2>
+
+    <div class="grid">
+
+        <img src="images/product1.jpg" onclick="openViewer('images/product1.jpg','COCO BAG')">
+        <img src="images/product2.jpg" onclick="openViewer('images/product2.jpg','COCO SHOES')">
+        <img src="images/product3.jpg" onclick="openViewer('images/product3.jpg','COCO WATCH')">
+        <img src="images/product4.jpg" onclick="openViewer('images/product4.jpg','COCO GLASSES')">
+
+    </div>
+
+</div>
+
+<!-- ================= IMAGE VIEWER ================= -->
+<div id="viewer" class="hidden">
+
+    <img id="bigImg" class="big-img">
+
+    <p id="title"></p>
+
+    <button class="back" onclick="closeViewer()">← BACK</button>
+
+</div>
+
+<!-- WHATSAPP -->
+<a class="wa"
+   href="https://api.whatsapp.com/send/?phone=6285363892602&text&type=phone_number&app_absent=0"
+   target="_blank">
+💬
+</a>
+
+<script>
+
+function openViewer(img,title){
+
+    document.getElementById("home").style.display = "none";
+    document.getElementById("viewer").classList.remove("hidden");
+
+    document.getElementById("bigImg").src = img;
+    document.getElementById("title").innerText = title;
+}
+
+function closeViewer(){
+
+    document.getElementById("home").style.display = "block";
+    document.getElementById("viewer").classList.add("hidden");
+}
+
+</script>
+
+</body>
+</html>
