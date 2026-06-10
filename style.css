@@ -1,0 +1,68 @@
+body{
+    margin:0;
+    display:flex;
+    justify-content:center;
+    background:#eee;
+}
+
+/* FRAME AUTO SCALE */
+.frame{
+    position:relative;
+    width:700px;
+    height:1013px;
+    transform:scale(calc(100vw / 700));
+    transform-origin:top left;
+}
+
+/* BANNER */
+.banner{
+    width:700px;
+    height:1013px;
+}
+
+/* HOTSPOT */
+.hot{
+    position:absolute;
+    background:transparent;
+    cursor:pointer;
+}
+
+/* PRODUCT */
+.p1{ left:56px;  top:492px; width:97px; height:92px; }
+.p2{ left:179px; top:492px; width:97px; height:92px; }
+.p3{ left:302px; top:492px; width:97px; height:92px; }
+.p4{ left:425px; top:492px; width:97px; height:92px; }
+.p5{ left:553px; top:492px; width:97px; height:92px; }
+
+/* COLOR */
+.black{  left:53px;  top:657px; width:100px; height:100px; }
+.purple{ left:179px; top:657px; width:100px; height:100px; }
+.gold{   left:303px; top:657px; width:100px; height:100px; }
+.silver{ left:425px; top:657px; width:100px; height:100px; }
+
+/* VIEW */
+.hidden{ display:none; }
+
+.big{
+    width:100%;
+}
+
+/* BUY (overlay dari desain) */
+.buy{
+    position:absolute;
+    left:171px;
+    top:848px;
+    width:354px;
+    height:84px;
+}
+
+/* BACK */
+.back{
+    position:absolute;
+    left:172px;
+    top:858px;
+    width:354px;
+    height:84px;
+    background:transparent;
+    border:none;
+}
