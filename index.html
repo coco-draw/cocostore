@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>COCO STORE</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= HOME ================= -->
+<div id="home" class="screen">
+
+  <img src="images/banner.jpg" class="banner">
+
+  <!-- PRODUCT -->
+  <div class="hot p1" onclick="openProduct(1)"></div>
+  <div class="hot p2" onclick="openProduct(2)"></div>
+  <div class="hot p3" onclick="openProduct(3)"></div>
+  <div class="hot p4" onclick="openProduct(4)"></div>
+  <div class="hot p5" onclick="openProduct(5)"></div>
+
+  <!-- COLOR -->
+  <div class="hot black" onclick="openColor('black')"></div>
+  <div class="hot purple" onclick="openColor('purple')"></div>
+  <div class="hot gold" onclick="openColor('gold')"></div>
+  <div class="hot silver" onclick="openColor('silver')"></div>
+
+</div>
+
+<!-- ================= PRODUCT VIEW ================= -->
+<div id="view" class="screen hidden">
+
+  <button class="back" onclick="goHome()">← BACK</button>
+
+  <img id="mainImg" class="big">
+
+  <a class="buy"
+     href="https://shopee.co.id/cocodraw?categoryId=100535&entryPoint=ShopByPDP&itemId=48709530040"
+     target="_blank">
+     BUY
+  </a>
+
+</div>
+
+<script>
+
+function openProduct(id){
+    document.getElementById("home").classList.add("hidden");
+    document.getElementById("view").classList.remove("hidden");
+
+    document.getElementById("mainImg").src = "images/product" + id + ".jpg";
+}
+
+function openColor(color){
+    document.getElementById("home").classList.add("hidden");
+    document.getElementById("view").classList.remove("hidden");
+
+    document.getElementById("mainImg").src = "images/" + color + ".jpg";
+}
+
+function goHome(){
+    document.getElementById("view").classList.add("hidden");
+    document.getElementById("home").classList.remove("hidden");
+}
+
+</script>
+
+</body>
+</html>
