@@ -1,0 +1,71 @@
+body{
+    margin:0;
+    font-family:Arial;
+}
+
+/* HOME */
+.banner-wrapper{
+    position:relative;
+}
+
+.banner{
+    width:100%;
+    display:block;
+}
+
+/* HOTSPOT */
+.hot{
+    position:absolute;
+    background:transparent;
+    cursor:pointer;
+}
+
+/* 5 PRODUCTS */
+.p1{ top:25%; left:5%; width:18%; height:20%; }
+.p2{ top:25%; left:25%; width:18%; height:20%; }
+.p3{ top:25%; left:45%; width:18%; height:20%; }
+.p4{ top:25%; left:65%; width:18%; height:20%; }
+.p5{ top:25%; left:82%; width:18%; height:20%; }
+
+/* VARIANT */
+.variant{ top:55%; left:10%; width:80%; height:20%; }
+
+/* CART */
+.cart{ top:10%; right:5%; width:10%; height:10%; }
+
+/* WA */
+.wa{ bottom:5%; right:5%; width:12%; height:12%; }
+
+/* PRODUCT PAGE */
+.hidden{ display:none; }
+
+#product{
+    padding:20px;
+}
+
+.big{
+    width:100%;
+    max-width:350px;
+}
+
+.back{
+    padding:10px;
+    background:#ddd;
+    border:none;
+    border-radius:8px;
+}
+
+.colors{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    margin-top:15px;
+}
+
+.colors button{
+    padding:8px;
+    border:none;
+    background:#333;
+    color:white;
+    border-radius:6px;
+}
