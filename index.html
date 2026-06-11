@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>COCO STORE</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- HOME -->
+<div id="home">
+
+    <div class="container">
+
+        <img src="images/banner.jpg" class="banner">
+
+        <div class="product-row">
+
+            <img src="images/product1.jpg" onclick="showDetail('product1')">
+            <img src="images/product2.jpg" onclick="showDetail('product2')">
+            <img src="images/product3.jpg" onclick="showDetail('product3')">
+            <img src="images/product4.jpg" onclick="showDetail('product4')">
+            <img src="images/product5.jpg" onclick="showDetail('product5')">
+
+        </div>
+
+        <div class="variant-row">
+
+            <img src="images/black.jpg" onclick="showDetail('black')">
+            <img src="images/purple.jpg" onclick="showDetail('purple')">
+            <img src="images/gold.jpg" onclick="showDetail('gold')">
+            <img src="images/silver.jpg" onclick="showDetail('silver')">
+
+        </div>
+
+       <a id="buyLink"
+href="https://shopee.co.id/cocodraw?categoryId=100535&entryPoint=ShopByPDP&itemId=48709530040"
+target="_blank">
+
+    <img src="images/buy.png" class="buy-detail">
+
+</a>
+
+        <div class="bottom-icons">
+
+            <a href="#">
+                <img src="images/cart.png">
+            </a>
+
+            <a href="https://api.whatsapp.com/send/?phone=6285363892602&text&type=phone_number&app_absent=0" target="_blank">
+                <img src="images/wa.png">
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- DETAIL -->
+<div id="detail" class="hidden">
+
+    <div class="container">
+
+        <img id="detailImage" class="detail-image">
+
+        <a href="https://shopee.co.id/cocodraw?categoryId=100535&entryPoint=ShopByPDP&itemId=48709530040" target="_blank">
+            <img src="images/buy.png" class="buy-detail">
+        </a>
+
+        <img
+            src="images/back.png"
+            class="back-btn"
+            onclick="goHome()">
+
+    </div>
+
+</div>
+
+<script>
+
+function showDetail(name){
+
+    document.getElementById("home").style.display = "none";
+    document.getElementById("detail").classList.remove("hidden");
+
+    document.getElementById("detailImage").src =
+        "images/" + name + ".jpg";
+
+    const buyLink =
+        document.getElementById("buyLink");
+
+    if(
+        name === "black" ||
+        name === "purple" ||
+        name === "gold" ||
+        name === "silver"
+    ){
+        buyLink.style.display = "block";
+    }
+    else{
+        buyLink.style.display = "none";
+    }
+}
+
+function goHome(){
+
+    document.getElementById("detail").classList.add("hidden");
+    document.getElementById("home").style.display = "block";
+}
+
+</script>
+</body>
+</html>
