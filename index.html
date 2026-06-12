@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>COCO STORE</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- HOME -->
+<div id="home">
+
+    <div class="container">
+
+        <div class="banner-wrapper">
+
+            <img src="images/banner.jpg" class="banner">
+
+            <!-- PRODUCTS -->
+            <div class="hotspot p1" onclick="showDetail('product1')"></div>
+            <div class="hotspot p2" onclick="showDetail('product2')"></div>
+            <div class="hotspot p3" onclick="showDetail('product3')"></div>
+            <div class="hotspot p4" onclick="showDetail('product4')"></div>
+            <div class="hotspot p5" onclick="showDetail('product5')"></div>
+
+            <!-- VARIANTS -->
+            <div class="hotspot black" onclick="showDetail('black')"></div>
+            <div class="hotspot purple" onclick="showDetail('purple')"></div>
+            <div class="hotspot gold" onclick="showDetail('gold')"></div>
+            <div class="hotspot silver" onclick="showDetail('silver')"></div>
+
+            <!-- BUY -->
+            <a
+            class="hotspot buy"
+            href="https://shopee.co.id/cocodraw?categoryId=100535&entryPoint=ShopByPDP&itemId=48709530040"
+            target="_blank"></a>
+
+            <!-- CART -->
+            <a
+            class="hotspot cart"
+            href="https://shopee.co.id/cocodraw?categoryId=100535&entryPoint=ShopByPDP&itemId=48709530040"
+            target="_blank"></a>
+
+            <!-- WA -->
+            <a
+            class="hotspot wa"
+            href="https://api.whatsapp.com/send/?phone=6285363892602&text&type=phone_number&app_absent=0"
+            target="_blank"></a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- DETAIL -->
+<div id="detail" class="hidden">
+
+    <div class="container">
+
+        <img id="detailImage" class="detail-image">
+
+        <img
+        src="images/back.png"
+        class="back-btn"
+        onclick="goHome()">
+
+    </div>
+
+</div>
+
+<script>
+
+function showDetail(name){
+
+    document.getElementById("home").style.display = "none";
+
+    document.getElementById("detail").classList.remove("hidden");
+
+    document.getElementById("detailImage").src =
+    "images/" + name + ".jpg";
+}
+
+function goHome(){
+
+    document.getElementById("detail").classList.add("hidden");
+
+    document.getElementById("home").style.display = "block";
+}
+
+</script>
+
+</body>
+</html>
